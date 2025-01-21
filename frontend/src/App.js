@@ -6,6 +6,7 @@ import { extendCookie } from './utils/setCookie';
 import Home from './components/pages/Home';
 import Auth from './components/pages/Auth';
 import Books from './components/pages/Books';
+import Book from './components/pages/Book';
 import Account from './components/pages/Account';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/signup' element={<Auth />} />
         <Route path="/login" element={<Auth />} />
         <Route path="/books" element={<Books />} />
+        <Route path="book/*" element={<Book />} />
         <Route path='/account' element={<Account />} />
       </Routes>
     </BrowserRouter>

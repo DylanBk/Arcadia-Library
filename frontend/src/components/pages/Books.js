@@ -460,7 +460,7 @@ export default function Books() {
                                     <a
                                         key={book.isbn}
                                         className="h-fit max-w-[90%] sm:max-w-[40%] md:w-1/3 lg:w-1/4 flex flex-col p-4 rounded-lg mx-auto xs:mx-0 bg-[#cfcfcf] hover:scale-105 focus:scale-105 active:scale-105 smooth-change sm:first:ml-5"
-                                        href="/book">
+                                        href={`/book/${book.isbn}`}>
                                         <img
                                             className="rounded-sm mb-2"
                                             src={placeholder}

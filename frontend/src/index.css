@@ -22,12 +22,14 @@
 }
 
 :root {
-  --bg: #020B13;
+  --bg: #010101;
   --grey: #262626;
-  --gold1: #B4944D;
-  --gold2: #A57A03;
-  --barossa: #400128;
-  --offBarossa: rgba(98, 3, 62, 0.4);
+  --gold1: #E6C468;
+  --gold2: #C1A05E;
+  --burgundy1: #7C2A2F;
+  --burgundy2: #9B3C47;
+  --burgundy3: #8E4549;
+  --cream: #F4EBD0;
 }
 
 html, body {
@@ -43,7 +45,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: white;
+  color: var(--cream);
   font-family: 'Casanova';
 }
 
@@ -91,12 +93,12 @@ a, button {
   width: fit-content;
   padding: 0.5rem 1rem;
   border-radius: 0.375rem;
-  background: var(--barossa);
+  background: var(--burgundy1);
   color: white;
   transition: all 0.3s;
 }
 .accent-btn:hover {
-  background: #44032b;
+  background: var(--burgundy2);
 }
 
 .secondary-btn {
@@ -156,10 +158,11 @@ a, button {
   cursor: pointer;
 }
 .filter:hover, .filter:focus, .filter:active {
-  background: var(--offBarossa);
+  background: var(--burgundy2);
 }
 .filter-selected {
-  background: var(--offBarossa) !important;
+  background: var(--burgundy3)  !important;
+  color: white !important;
 }
 
 .filter input {

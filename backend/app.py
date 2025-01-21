@@ -129,15 +129,21 @@ def sort_books():
         filter = data['name']
 
         data = db.read_books_filtered(sortby=filter)
-        print(data)
 
         return jsonify({"message": "books fetched successfully", "data": data})
 
 
 
-
-
 # BOOK
+
+@app.route('/book/<int:isbn>', methods=['GET'])
+def get_book(isbn):
+    data = db.read_book(isbn=isbn)
+
+    if data:
+        return jsonify({"message": "book fetched successfully", "data": data}), 200
+    else:
+        return jsonify({"error": "book not found"}), 404
 
 @app.route('/book/add', methods=['GET', 'POST'])
 def add_book():

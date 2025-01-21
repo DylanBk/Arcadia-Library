@@ -219,7 +219,20 @@ def read_book(**kwargs):
             book = session.query(Book).filter(and_(Book.title == title)).all()
 
         session.close()
-    return book
+
+    if book: #TODO change code to allow for multiple books if book queried by title
+        book_dict = {
+            'isbn': book.isbn,
+            'title': book.title,
+            'genre': book.genre,
+            'literary_type': book.literary_type,
+            'author': book.author,
+            'num_copies': book.num_copies,
+            'date_created': book.date_created,
+            'date_added': book.date_added
+        }
+
+    return book_dict
 
 def read_books_filtered(**kwargs):
     genres = kwargs.get('genres', None)
